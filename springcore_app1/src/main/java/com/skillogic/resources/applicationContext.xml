@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="emp" class="com.skillogic.beans.Employee">
+		<property name="id" value="1111"></property>
+		<property name="name" value="Raja"></property>
+		<property name="salary" value="50000.00"></property>
+		<property name="address" ref="addrs"></property>
+		<property name="nickName">
+			<list>
+				<value>King</value>
+				<value>Raja</value>
+			</list>
+		</property>
+		<property name="mobileNo">
+			<set>
+				<value>7412589620</value>
+				<value>8523697410</value>
+			</set>
+		</property>
+		<property name="idProofs">
+			<map>
+				<entry key="aadhar" value="32145698710"></entry>
+				<entry key="pancard" value="SHS2632KM"></entry>
+			</map>
+		</property>
+
+	</bean>
+	<bean id="addrs" class="com.skillogic.beans.Address">
+		<property name="doorNo" value="123/56"></property>
+		<property name="areaName" value="Ameerpet"></property>
+		<property name="city" value="Hyderabad"></property>
+	</bean>
+
+</beans>
